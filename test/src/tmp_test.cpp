@@ -1,15 +1,8 @@
-#include "project/tmp.hpp"
+#include "MakeSokoJsonFiles/tmp.hpp"
 
-#include <gtest/gtest.h>
+#include<catch2/catch_test_macros.hpp>
 
-TEST(TmpAddTest, CheckValues)
+TEST_CASE("Two numbers are added")
 {
-  ASSERT_EQ(tmp::add(1, 2), 3);
-  EXPECT_TRUE(true);
-}
-
-int main(int argc, char **argv)
-{
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+  REQUIRE( tmp::add(1, 2) == 3);
 }
